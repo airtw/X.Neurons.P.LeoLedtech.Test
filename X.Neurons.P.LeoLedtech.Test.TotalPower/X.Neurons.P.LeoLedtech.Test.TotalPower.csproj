@@ -8,7 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DevExpress.Win.Design" Version="25.1.*" />

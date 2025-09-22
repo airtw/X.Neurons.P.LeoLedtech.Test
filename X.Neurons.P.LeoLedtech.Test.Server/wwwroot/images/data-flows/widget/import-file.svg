@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-d0531f85-d0ce-46c5-a29f-ddc1e48c50c1" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575.6 500.68">
+  <g id="uuid-75a960fa-8aa3-4054-a5f9-9287c0c307f4" data-name="圖層 1">
+    <g>
+      <g>
+        <g>
+          <path d="m253.84,0h286.44v256.47H253.84V0Z" style="fill: #dbd8dd; stroke-width: 0px;"/>
+          <path d="m238.8,23.81h277.71v247.75H238.8V23.81Z" style="fill: #eeefee; stroke-width: 0px;"/>
+          <g>
+            <path d="m270.21,55.32h214.92v11.28h-214.92v-11.28Z" style="fill: #dbd8dd; stroke-width: 0px;"/>
+            <path d="m270.21,91.14h214.92v11.28h-214.92v-11.28Z" style="fill: #dbd8dd; stroke-width: 0px;"/>
+            <path d="m270.21,126.96h214.92v11.28h-214.92v-11.28Z" style="fill: #dbd8dd; stroke-width: 0px;"/>
+          </g>
+        </g>
+        <g>
+          <path d="m338.2,132.84l-22.74-36.49c-3.7-5.92-10.18-9.52-17.16-9.52h-102.17c-12.04,0-21.81,9.77-21.81,21.81h0v306.1c0,12.04,9.76,21.81,21.8,21.81h357.66c12.04,0,21.81-9.76,21.81-21.8h0v-250.58c0-12.05-9.77-21.81-21.81-21.81h-198.43c-6.98,0-13.47-3.59-17.16-9.52h.01Z" style="fill: #fdcb71; stroke-width: 0px;"/>
+          <path d="m553.79,142.35h-198.43c-6.98,0-13.47-3.59-17.16-9.52l-22.74-36.49c-3.69-5.91-10.18-9.51-17.16-9.51h-102.17c-12.04,0-21.81,9.77-21.81,21.81h0v99.78h401.28v-44.26c0-12.05-9.77-21.81-21.81-21.81h0Z" style="fill: #fae09d; stroke-width: 0px;"/>
+        </g>
+        <g>
+          <path d="m305.97,260.88h-36.44v41.66h31.13v18.26h-31.13v62.26h-21.05v-140.81h57.49v18.62Z" style="fill: #009245; stroke-width: 0px;"/>
+          <path d="m350.41,383.07h-21.05v-140.81h21.05v140.81Z" style="fill: #009245; stroke-width: 0px;"/>
+          <path d="m434.07,383.07h-55.33v-140.81h21.05v122h34.28v18.8Z" style="fill: #009245; stroke-width: 0px;"/>
+          <path d="m516.02,383.07h-58.39v-140.81h57.85v18.62h-36.8v41.12h31.67v18.26h-31.67v44.18h37.34v18.62Z" style="fill: #009245; stroke-width: 0px;"/>
+        </g>
+      </g>
+      <g>
+        <circle cx="112.08" cy="388.53" r="112" style="fill: #559b2d; stroke-width: 0px;"/>
+        <path d="m104.08,292.53c-39.32,0-75.75,20.66-95.94,54.4-23.1,57.32,4.63,122.52,61.95,145.63,51.13,20.61,109.66.91,137.92-46.43,23.05-57.32-4.73-122.47-62.05-145.52-13.31-5.35-27.53-8.1-41.89-8.08h0Z" style="fill: #6bc13b; stroke-width: 0px;"/>
+        <path d="m136.08,444.53l56-56-56-56v32H32.08v48h104v32Z" style="fill: #f2f2f2; stroke-width: 0px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

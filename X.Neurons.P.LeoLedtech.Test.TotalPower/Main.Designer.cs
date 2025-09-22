@@ -118,6 +118,9 @@
             svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(components);
             serverTimer = new System.Windows.Forms.Timer(components);
             scannerTimer = new System.Windows.Forms.Timer(components);
+            btn_DisableBizz = new DevExpress.XtraEditors.SimpleButton();
+            layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)popupMenu1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
@@ -186,6 +189,8 @@
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)svgImageCollection1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).BeginInit();
             SuspendLayout();
             // 
             // barManager1
@@ -284,7 +289,7 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(1942, 23);
+            barDockControlTop.Size = new Size(1820, 23);
             // 
             // barDockControlBottom
             // 
@@ -292,7 +297,7 @@
             barDockControlBottom.Dock = DockStyle.Bottom;
             barDockControlBottom.Location = new Point(0, 1051);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(1942, 21);
+            barDockControlBottom.Size = new Size(1820, 21);
             // 
             // barDockControlLeft
             // 
@@ -306,12 +311,13 @@
             // 
             barDockControlRight.CausesValidation = false;
             barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(1942, 23);
+            barDockControlRight.Location = new Point(1820, 23);
             barDockControlRight.Manager = barManager1;
             barDockControlRight.Size = new Size(0, 1028);
             // 
             // layoutControl1
             // 
+            layoutControl1.Controls.Add(btn_DisableBizz);
             layoutControl1.Controls.Add(gcTestLog);
             layoutControl1.Controls.Add(gcTestStep);
             layoutControl1.Controls.Add(ch4_chart);
@@ -329,19 +335,19 @@
             layoutControl1.Dock = DockStyle.Fill;
             layoutControl1.Location = new Point(0, 23);
             layoutControl1.Name = "layoutControl1";
-            layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new Rectangle(1579, 388, 786, 777);
+            layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new Rectangle(1014, 300, 786, 777);
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(1942, 1028);
+            layoutControl1.Size = new Size(1820, 1028);
             layoutControl1.TabIndex = 4;
             layoutControl1.Text = "layoutControl1";
             // 
             // gcTestLog
             // 
-            gcTestLog.Location = new Point(928, 609);
+            gcTestLog.Location = new Point(871, 598);
             gcTestLog.MainView = gvTestLog;
             gcTestLog.MenuManager = barManager1;
             gcTestLog.Name = "gcTestLog";
-            gcTestLog.Size = new Size(990, 395);
+            gcTestLog.Size = new Size(925, 406);
             gcTestLog.TabIndex = 18;
             gcTestLog.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvTestLog });
             // 
@@ -401,11 +407,11 @@
             // 
             // gcTestStep
             // 
-            gcTestStep.Location = new Point(928, 250);
+            gcTestStep.Location = new Point(871, 250);
             gcTestStep.MainView = gvTestStep;
             gcTestStep.MenuManager = barManager1;
             gcTestStep.Name = "gcTestStep";
-            gcTestStep.Size = new Size(990, 306);
+            gcTestStep.Size = new Size(925, 295);
             gcTestStep.TabIndex = 17;
             gcTestStep.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gvTestStep });
             // 
@@ -453,35 +459,35 @@
             // 
             // ch4_chart
             // 
-            ch4_chart.Location = new Point(24, 867);
+            ch4_chart.Location = new Point(24, 849);
             ch4_chart.Name = "ch4_chart";
-            ch4_chart.Size = new Size(876, 137);
+            ch4_chart.Size = new Size(819, 155);
             ch4_chart.TabIndex = 16;
             // 
             // ch3_chart
             // 
-            ch3_chart.Location = new Point(24, 630);
+            ch3_chart.Location = new Point(24, 618);
             ch3_chart.Name = "ch3_chart";
-            ch3_chart.Size = new Size(876, 134);
+            ch3_chart.Size = new Size(819, 128);
             ch3_chart.TabIndex = 15;
             // 
             // ch2_chart
             // 
-            ch2_chart.Location = new Point(24, 392);
+            ch2_chart.Location = new Point(24, 386);
             ch2_chart.Name = "ch2_chart";
-            ch2_chart.Size = new Size(876, 135);
+            ch2_chart.Size = new Size(819, 129);
             ch2_chart.TabIndex = 14;
             // 
             // ch1_chart
             // 
             ch1_chart.Location = new Point(24, 155);
             ch1_chart.Name = "ch1_chart";
-            ch1_chart.Size = new Size(876, 134);
+            ch1_chart.Size = new Size(819, 128);
             ch1_chart.TabIndex = 13;
             // 
             // ch4_CableColor
             // 
-            ch4_CableColor.Location = new Point(84, 817);
+            ch4_CableColor.Location = new Point(84, 799);
             ch4_CableColor.Name = "ch4_CableColor";
             ch4_CableColor.Size = new Size(46, 46);
             ch4_CableColor.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Stretch;
@@ -490,7 +496,7 @@
             // 
             // ch2_CableColor
             // 
-            ch2_CableColor.Location = new Point(84, 342);
+            ch2_CableColor.Location = new Point(84, 336);
             ch2_CableColor.Name = "ch2_CableColor";
             ch2_CableColor.Size = new Size(46, 46);
             ch2_CableColor.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Stretch;
@@ -499,7 +505,7 @@
             // 
             // ch3_CableColor
             // 
-            ch3_CableColor.Location = new Point(84, 580);
+            ch3_CableColor.Location = new Point(84, 568);
             ch3_CableColor.Name = "ch3_CableColor";
             ch3_CableColor.Size = new Size(46, 46);
             ch3_CableColor.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Stretch;
@@ -519,9 +525,9 @@
             // 
             btn_start.Appearance.Font = new Font("微軟正黑體", 16F, FontStyle.Bold);
             btn_start.Appearance.Options.UseFont = true;
-            btn_start.Location = new Point(973, 12);
+            btn_start.Location = new Point(912, 12);
             btn_start.Name = "btn_start";
-            btn_start.Size = new Size(957, 33);
+            btn_start.Size = new Size(436, 33);
             btn_start.StyleController = layoutControl1;
             btn_start.TabIndex = 0;
             btn_start.Text = "開始測試";
@@ -529,37 +535,37 @@
             // 
             // jia_Number_Value
             // 
-            jia_Number_Value.Location = new Point(1062, 105);
+            jia_Number_Value.Location = new Point(1005, 105);
             jia_Number_Value.MenuManager = barManager1;
             jia_Number_Value.Name = "jia_Number_Value";
             jia_Number_Value.Properties.Appearance.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             jia_Number_Value.Properties.Appearance.Options.UseFont = true;
             jia_Number_Value.Properties.ReadOnly = true;
-            jia_Number_Value.Size = new Size(856, 28);
+            jia_Number_Value.Size = new Size(791, 28);
             jia_Number_Value.StyleController = layoutControl1;
             jia_Number_Value.TabIndex = 5;
             // 
             // workOder_Number_Value
             // 
-            workOder_Number_Value.Location = new Point(1062, 137);
+            workOder_Number_Value.Location = new Point(1005, 137);
             workOder_Number_Value.MenuManager = barManager1;
             workOder_Number_Value.Name = "workOder_Number_Value";
             workOder_Number_Value.Properties.Appearance.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             workOder_Number_Value.Properties.Appearance.Options.UseFont = true;
             workOder_Number_Value.Properties.ReadOnly = true;
-            workOder_Number_Value.Size = new Size(856, 28);
+            workOder_Number_Value.Size = new Size(791, 28);
             workOder_Number_Value.StyleController = layoutControl1;
             workOder_Number_Value.TabIndex = 6;
             // 
             // Test_Number_Value
             // 
-            Test_Number_Value.Location = new Point(1062, 169);
+            Test_Number_Value.Location = new Point(1005, 169);
             Test_Number_Value.MenuManager = barManager1;
             Test_Number_Value.Name = "Test_Number_Value";
             Test_Number_Value.Properties.Appearance.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             Test_Number_Value.Properties.Appearance.Options.UseFont = true;
             Test_Number_Value.Properties.ReadOnly = true;
-            Test_Number_Value.Size = new Size(856, 28);
+            Test_Number_Value.Size = new Size(791, 28);
             Test_Number_Value.StyleController = layoutControl1;
             Test_Number_Value.TabIndex = 7;
             // 
@@ -567,17 +573,17 @@
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             Root.GroupBordersVisible = false;
-            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlGroup7, ch1_Group, ch2_Group, ch3_Group, emptySpaceItem2, layoutControlGroup6, layoutControlGroup5, status, ch4_Group });
+            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlGroup7, ch1_Group, ch2_Group, ch3_Group, emptySpaceItem2, layoutControlGroup6, layoutControlGroup5, status, ch4_Group, layoutControlItem3, emptySpaceItem1 });
             Root.Name = "Root";
-            Root.Size = new Size(1942, 1028);
+            Root.Size = new Size(1820, 1028);
             Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             layoutControlItem1.Control = btn_start;
-            layoutControlItem1.Location = new Point(961, 0);
+            layoutControlItem1.Location = new Point(900, 0);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(961, 37);
+            layoutControlItem1.Size = new Size(440, 37);
             layoutControlItem1.TextVisible = false;
             // 
             // layoutControlGroup7
@@ -587,9 +593,9 @@
             layoutControlGroup7.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             layoutControlGroup7.AppearanceItemCaption.Options.UseFont = true;
             layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem2 });
-            layoutControlGroup7.Location = new Point(904, 560);
+            layoutControlGroup7.Location = new Point(847, 549);
             layoutControlGroup7.Name = "layoutControlGroup7";
-            layoutControlGroup7.Size = new Size(1018, 448);
+            layoutControlGroup7.Size = new Size(953, 459);
             layoutControlGroup7.Text = "測試紀錄";
             // 
             // layoutControlItem2
@@ -597,7 +603,7 @@
             layoutControlItem2.Control = gcTestLog;
             layoutControlItem2.Location = new Point(0, 0);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(994, 399);
+            layoutControlItem2.Size = new Size(929, 410);
             layoutControlItem2.TextVisible = false;
             // 
             // ch1_Group
@@ -607,7 +613,7 @@
             ch1_Group.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { ch1_CableColor_title, layoutControlItem7, ch1_Current_Title, ch1_Current_Value, ch1_Current_Unit, emptySpaceItem6, emptySpaceItem7, layoutControlItem12 });
             ch1_Group.Location = new Point(0, 56);
             ch1_Group.Name = "ch1_Group";
-            ch1_Group.Size = new Size(904, 237);
+            ch1_Group.Size = new Size(847, 231);
             ch1_Group.Text = "電流監測-1";
             // 
             // ch1_CableColor_title
@@ -638,7 +644,7 @@
             // 
             ch1_Current_Title.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch1_Current_Title.AppearanceItemCaption.Options.UseFont = true;
-            ch1_Current_Title.Location = new Point(419, 0);
+            ch1_Current_Title.Location = new Point(396, 0);
             ch1_Current_Title.MaxSize = new Size(50, 25);
             ch1_Current_Title.MinSize = new Size(50, 25);
             ch1_Current_Title.Name = "ch1_Current_Title";
@@ -651,7 +657,7 @@
             // 
             ch1_Current_Value.AppearanceItemCaption.Font = new Font("微軟正黑體", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ch1_Current_Value.AppearanceItemCaption.Options.UseFont = true;
-            ch1_Current_Value.Location = new Point(469, 0);
+            ch1_Current_Value.Location = new Point(446, 0);
             ch1_Current_Value.MaxSize = new Size(126, 44);
             ch1_Current_Value.MinSize = new Size(126, 44);
             ch1_Current_Value.Name = "ch1_Current_Value";
@@ -664,7 +670,7 @@
             // 
             ch1_Current_Unit.AppearanceItemCaption.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
             ch1_Current_Unit.AppearanceItemCaption.Options.UseFont = true;
-            ch1_Current_Unit.Location = new Point(595, 0);
+            ch1_Current_Unit.Location = new Point(572, 0);
             ch1_Current_Unit.Name = "ch1_Current_Unit";
             ch1_Current_Unit.Size = new Size(126, 50);
             ch1_Current_Unit.Text = "mA";
@@ -674,20 +680,20 @@
             // 
             emptySpaceItem6.Location = new Point(110, 0);
             emptySpaceItem6.Name = "emptySpaceItem6";
-            emptySpaceItem6.Size = new Size(309, 50);
+            emptySpaceItem6.Size = new Size(286, 50);
             // 
             // emptySpaceItem7
             // 
-            emptySpaceItem7.Location = new Point(721, 0);
+            emptySpaceItem7.Location = new Point(698, 0);
             emptySpaceItem7.Name = "emptySpaceItem7";
-            emptySpaceItem7.Size = new Size(159, 50);
+            emptySpaceItem7.Size = new Size(125, 50);
             // 
             // layoutControlItem12
             // 
             layoutControlItem12.Control = ch1_chart;
             layoutControlItem12.Location = new Point(0, 50);
             layoutControlItem12.Name = "layoutControlItem12";
-            layoutControlItem12.Size = new Size(880, 138);
+            layoutControlItem12.Size = new Size(823, 132);
             layoutControlItem12.TextVisible = false;
             // 
             // ch2_Group
@@ -697,9 +703,9 @@
             ch2_Group.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch2_Group.AppearanceItemCaption.Options.UseFont = true;
             ch2_Group.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { ch2_CableColor_title, layoutControlItem9, ch2_Current_Title, ch2_Current_Value, ch2_Current_Unit, emptySpaceItem5, emptySpaceItem8, layoutControlItem11 });
-            ch2_Group.Location = new Point(0, 293);
+            ch2_Group.Location = new Point(0, 287);
             ch2_Group.Name = "ch2_Group";
-            ch2_Group.Size = new Size(904, 238);
+            ch2_Group.Size = new Size(847, 232);
             ch2_Group.Text = "電流監測-2";
             // 
             // ch2_CableColor_title
@@ -730,7 +736,7 @@
             // 
             ch2_Current_Title.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch2_Current_Title.AppearanceItemCaption.Options.UseFont = true;
-            ch2_Current_Title.Location = new Point(419, 0);
+            ch2_Current_Title.Location = new Point(396, 0);
             ch2_Current_Title.MaxSize = new Size(50, 25);
             ch2_Current_Title.MinSize = new Size(50, 25);
             ch2_Current_Title.Name = "ch2_Current_Title";
@@ -743,7 +749,7 @@
             // 
             ch2_Current_Value.AppearanceItemCaption.Font = new Font("微軟正黑體", 24F, FontStyle.Bold);
             ch2_Current_Value.AppearanceItemCaption.Options.UseFont = true;
-            ch2_Current_Value.Location = new Point(469, 0);
+            ch2_Current_Value.Location = new Point(446, 0);
             ch2_Current_Value.MaxSize = new Size(126, 44);
             ch2_Current_Value.MinSize = new Size(126, 44);
             ch2_Current_Value.Name = "ch2_Current_Value";
@@ -756,7 +762,7 @@
             // 
             ch2_Current_Unit.AppearanceItemCaption.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
             ch2_Current_Unit.AppearanceItemCaption.Options.UseFont = true;
-            ch2_Current_Unit.Location = new Point(595, 0);
+            ch2_Current_Unit.Location = new Point(572, 0);
             ch2_Current_Unit.Name = "ch2_Current_Unit";
             ch2_Current_Unit.Size = new Size(126, 50);
             ch2_Current_Unit.Text = "mA";
@@ -766,20 +772,20 @@
             // 
             emptySpaceItem5.Location = new Point(110, 0);
             emptySpaceItem5.Name = "emptySpaceItem5";
-            emptySpaceItem5.Size = new Size(309, 50);
+            emptySpaceItem5.Size = new Size(286, 50);
             // 
             // emptySpaceItem8
             // 
-            emptySpaceItem8.Location = new Point(721, 0);
+            emptySpaceItem8.Location = new Point(698, 0);
             emptySpaceItem8.Name = "emptySpaceItem8";
-            emptySpaceItem8.Size = new Size(159, 50);
+            emptySpaceItem8.Size = new Size(125, 50);
             // 
             // layoutControlItem11
             // 
             layoutControlItem11.Control = ch2_chart;
             layoutControlItem11.Location = new Point(0, 50);
             layoutControlItem11.Name = "layoutControlItem11";
-            layoutControlItem11.Size = new Size(880, 139);
+            layoutControlItem11.Size = new Size(823, 133);
             layoutControlItem11.TextVisible = false;
             // 
             // ch3_Group
@@ -789,9 +795,9 @@
             ch3_Group.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch3_Group.AppearanceItemCaption.Options.UseFont = true;
             ch3_Group.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { ch3_CableColor_title, layoutControlItem8, ch3_Current_Title, ch3_Current_Value, ch3_Current_Unit, emptySpaceItem4, layoutControlItem13, emptySpaceItem9 });
-            ch3_Group.Location = new Point(0, 531);
+            ch3_Group.Location = new Point(0, 519);
             ch3_Group.Name = "ch3_Group";
-            ch3_Group.Size = new Size(904, 237);
+            ch3_Group.Size = new Size(847, 231);
             ch3_Group.Text = "電流監測-3";
             // 
             // ch3_CableColor_title
@@ -822,7 +828,7 @@
             // 
             ch3_Current_Title.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch3_Current_Title.AppearanceItemCaption.Options.UseFont = true;
-            ch3_Current_Title.Location = new Point(419, 0);
+            ch3_Current_Title.Location = new Point(396, 0);
             ch3_Current_Title.MaxSize = new Size(50, 25);
             ch3_Current_Title.MinSize = new Size(50, 25);
             ch3_Current_Title.Name = "ch3_Current_Title";
@@ -835,7 +841,7 @@
             // 
             ch3_Current_Value.AppearanceItemCaption.Font = new Font("微軟正黑體", 24F, FontStyle.Bold);
             ch3_Current_Value.AppearanceItemCaption.Options.UseFont = true;
-            ch3_Current_Value.Location = new Point(469, 0);
+            ch3_Current_Value.Location = new Point(446, 0);
             ch3_Current_Value.MaxSize = new Size(126, 44);
             ch3_Current_Value.MinSize = new Size(126, 44);
             ch3_Current_Value.Name = "ch3_Current_Value";
@@ -848,7 +854,7 @@
             // 
             ch3_Current_Unit.AppearanceItemCaption.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
             ch3_Current_Unit.AppearanceItemCaption.Options.UseFont = true;
-            ch3_Current_Unit.Location = new Point(595, 0);
+            ch3_Current_Unit.Location = new Point(572, 0);
             ch3_Current_Unit.Name = "ch3_Current_Unit";
             ch3_Current_Unit.Size = new Size(126, 50);
             ch3_Current_Unit.Text = "mA";
@@ -858,27 +864,27 @@
             // 
             emptySpaceItem4.Location = new Point(110, 0);
             emptySpaceItem4.Name = "emptySpaceItem4";
-            emptySpaceItem4.Size = new Size(309, 50);
+            emptySpaceItem4.Size = new Size(286, 50);
             // 
             // layoutControlItem13
             // 
             layoutControlItem13.Control = ch3_chart;
             layoutControlItem13.Location = new Point(0, 50);
             layoutControlItem13.Name = "layoutControlItem13";
-            layoutControlItem13.Size = new Size(880, 138);
+            layoutControlItem13.Size = new Size(823, 132);
             layoutControlItem13.TextVisible = false;
             // 
             // emptySpaceItem9
             // 
-            emptySpaceItem9.Location = new Point(721, 0);
+            emptySpaceItem9.Location = new Point(698, 0);
             emptySpaceItem9.Name = "emptySpaceItem9";
-            emptySpaceItem9.Size = new Size(159, 50);
+            emptySpaceItem9.Size = new Size(125, 50);
             // 
             // emptySpaceItem2
             // 
             emptySpaceItem2.Location = new Point(0, 37);
             emptySpaceItem2.Name = "emptySpaceItem2";
-            emptySpaceItem2.Size = new Size(1922, 19);
+            emptySpaceItem2.Size = new Size(1800, 19);
             // 
             // layoutControlGroup6
             // 
@@ -887,9 +893,9 @@
             layoutControlGroup6.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             layoutControlGroup6.AppearanceItemCaption.Options.UseFont = true;
             layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem4 });
-            layoutControlGroup6.Location = new Point(904, 201);
+            layoutControlGroup6.Location = new Point(847, 201);
             layoutControlGroup6.Name = "layoutControlGroup6";
-            layoutControlGroup6.Size = new Size(1018, 359);
+            layoutControlGroup6.Size = new Size(953, 348);
             layoutControlGroup6.Text = "測試步驟";
             // 
             // layoutControlItem4
@@ -897,7 +903,7 @@
             layoutControlItem4.Control = gcTestStep;
             layoutControlItem4.Location = new Point(0, 0);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(994, 310);
+            layoutControlItem4.Size = new Size(929, 299);
             layoutControlItem4.TextVisible = false;
             // 
             // layoutControlGroup5
@@ -907,9 +913,9 @@
             layoutControlGroup5.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             layoutControlGroup5.AppearanceItemCaption.Options.UseFont = true;
             layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { jia_Number_title, workOder_Number, Test_Number_Title });
-            layoutControlGroup5.Location = new Point(904, 56);
+            layoutControlGroup5.Location = new Point(847, 56);
             layoutControlGroup5.Name = "layoutControlGroup5";
-            layoutControlGroup5.Size = new Size(1018, 145);
+            layoutControlGroup5.Size = new Size(953, 145);
             layoutControlGroup5.Text = "測試資訊";
             // 
             // jia_Number_title
@@ -919,7 +925,7 @@
             jia_Number_title.Control = jia_Number_Value;
             jia_Number_title.Location = new Point(0, 0);
             jia_Number_title.Name = "jia_Number_title";
-            jia_Number_title.Size = new Size(994, 32);
+            jia_Number_title.Size = new Size(929, 32);
             jia_Number_title.Text = "治具號碼";
             jia_Number_title.TextSize = new Size(122, 21);
             // 
@@ -930,7 +936,7 @@
             workOder_Number.Control = workOder_Number_Value;
             workOder_Number.Location = new Point(0, 32);
             workOder_Number.Name = "workOder_Number";
-            workOder_Number.Size = new Size(994, 32);
+            workOder_Number.Size = new Size(929, 32);
             workOder_Number.Text = "工單號碼";
             workOder_Number.TextSize = new Size(122, 21);
             // 
@@ -941,7 +947,7 @@
             Test_Number_Title.Control = Test_Number_Value;
             Test_Number_Title.Location = new Point(0, 64);
             Test_Number_Title.Name = "Test_Number_Title";
-            Test_Number_Title.Size = new Size(994, 32);
+            Test_Number_Title.Size = new Size(929, 32);
             Test_Number_Title.Text = "待測物號碼";
             Test_Number_Title.TextSize = new Size(122, 21);
             // 
@@ -955,7 +961,7 @@
             status.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             status.Location = new Point(0, 0);
             status.Name = "status";
-            status.Size = new Size(961, 37);
+            status.Size = new Size(900, 37);
             status.Text = "等待測試";
             status.TextSize = new Size(122, 28);
             // 
@@ -966,9 +972,9 @@
             ch4_Group.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch4_Group.AppearanceItemCaption.Options.UseFont = true;
             ch4_Group.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { ch4_CableColor_title, layoutControlItem10, ch4_Current_Title, ch4_Current_Value, ch4_Current_Unit, emptySpaceItem3, emptySpaceItem10, layoutControlItem14 });
-            ch4_Group.Location = new Point(0, 768);
+            ch4_Group.Location = new Point(0, 750);
             ch4_Group.Name = "ch4_Group";
-            ch4_Group.Size = new Size(904, 240);
+            ch4_Group.Size = new Size(847, 258);
             ch4_Group.Text = "電流監測-4";
             // 
             // ch4_CableColor_title
@@ -999,7 +1005,7 @@
             // 
             ch4_Current_Title.AppearanceItemCaption.Font = new Font("微軟正黑體", 12F, FontStyle.Bold);
             ch4_Current_Title.AppearanceItemCaption.Options.UseFont = true;
-            ch4_Current_Title.Location = new Point(419, 0);
+            ch4_Current_Title.Location = new Point(396, 0);
             ch4_Current_Title.MaxSize = new Size(50, 25);
             ch4_Current_Title.MinSize = new Size(50, 25);
             ch4_Current_Title.Name = "ch4_Current_Title";
@@ -1012,7 +1018,7 @@
             // 
             ch4_Current_Value.AppearanceItemCaption.Font = new Font("微軟正黑體", 24F, FontStyle.Bold);
             ch4_Current_Value.AppearanceItemCaption.Options.UseFont = true;
-            ch4_Current_Value.Location = new Point(469, 0);
+            ch4_Current_Value.Location = new Point(446, 0);
             ch4_Current_Value.MaxSize = new Size(126, 44);
             ch4_Current_Value.MinSize = new Size(126, 44);
             ch4_Current_Value.Name = "ch4_Current_Value";
@@ -1025,7 +1031,7 @@
             // 
             ch4_Current_Unit.AppearanceItemCaption.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
             ch4_Current_Unit.AppearanceItemCaption.Options.UseFont = true;
-            ch4_Current_Unit.Location = new Point(595, 0);
+            ch4_Current_Unit.Location = new Point(572, 0);
             ch4_Current_Unit.Name = "ch4_Current_Unit";
             ch4_Current_Unit.Size = new Size(126, 50);
             ch4_Current_Unit.Text = "mA";
@@ -1035,30 +1041,21 @@
             // 
             emptySpaceItem3.Location = new Point(110, 0);
             emptySpaceItem3.Name = "emptySpaceItem3";
-            emptySpaceItem3.Size = new Size(309, 50);
+            emptySpaceItem3.Size = new Size(286, 50);
             // 
             // emptySpaceItem10
             // 
-            emptySpaceItem10.Location = new Point(721, 0);
+            emptySpaceItem10.Location = new Point(698, 0);
             emptySpaceItem10.Name = "emptySpaceItem10";
-            emptySpaceItem10.Size = new Size(159, 50);
+            emptySpaceItem10.Size = new Size(125, 50);
             // 
             // layoutControlItem14
             // 
             layoutControlItem14.Control = ch4_chart;
             layoutControlItem14.Location = new Point(0, 50);
             layoutControlItem14.Name = "layoutControlItem14";
-            layoutControlItem14.Size = new Size(880, 141);
+            layoutControlItem14.Size = new Size(823, 159);
             layoutControlItem14.TextVisible = false;
-            // 
-            // svgImageCollection1
-            // 
-            svgImageCollection1.Add("black", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.black"));
-            svgImageCollection1.Add("black_white", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.black_white"));
-            svgImageCollection1.Add("blue", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.blue"));
-            svgImageCollection1.Add("brown", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.brown"));
-            svgImageCollection1.Add("green", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.green"));
-            svgImageCollection1.Add("green_yellow", (DevExpress.Utils.Svg.SvgImage)resources.GetObject("svgImageCollection1.green_yellow"));
             // 
             // serverTimer
             // 
@@ -1066,12 +1063,38 @@
             serverTimer.Interval = 1000;
             serverTimer.Tick += serverTimer_Tick;
             // 
+            // btn_DisableBizz
+            // 
+            btn_DisableBizz.Appearance.Font = new Font("微軟正黑體", 16F, FontStyle.Bold);
+            btn_DisableBizz.Appearance.Options.UseFont = true;
+            btn_DisableBizz.Location = new Point(1379, 12);
+            btn_DisableBizz.Name = "btn_DisableBizz";
+            btn_DisableBizz.Size = new Size(429, 33);
+            btn_DisableBizz.StyleController = layoutControl1;
+            btn_DisableBizz.TabIndex = 19;
+            btn_DisableBizz.Text = "蜂鳴聲禁音";
+            btn_DisableBizz.Click += btn_DisableBizz_Click;
+            // 
+            // layoutControlItem3
+            // 
+            layoutControlItem3.Control = btn_DisableBizz;
+            layoutControlItem3.Location = new Point(1367, 0);
+            layoutControlItem3.Name = "layoutControlItem3";
+            layoutControlItem3.Size = new Size(433, 37);
+            layoutControlItem3.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            emptySpaceItem1.Location = new Point(1340, 0);
+            emptySpaceItem1.Name = "emptySpaceItem1";
+            emptySpaceItem1.Size = new Size(27, 37);
+            // 
             // Main
             // 
             Appearance.Options.UseFont = true;
             AutoScaleDimensions = new SizeF(6F, 12F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1942, 1072);
+            ClientSize = new Size(1820, 1072);
             Controls.Add(layoutControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
@@ -1150,6 +1173,8 @@
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem10).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem14).EndInit();
             ((System.ComponentModel.ISupportInitialize)svgImageCollection1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1244,5 +1269,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcDateTime;
         private DevExpress.XtraGrid.Columns.GridColumn gcStep;
         private DevExpress.XtraGrid.Columns.GridColumn gcContent;
+        private DevExpress.XtraEditors.SimpleButton btn_DisableBizz;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }

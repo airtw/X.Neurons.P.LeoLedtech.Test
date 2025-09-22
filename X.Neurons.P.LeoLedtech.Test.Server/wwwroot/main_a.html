@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../libs/bulma/bulma.min.css">
+    <link rel="stylesheet" href="../css/page/main.css">
+</head>
+
+<body>
+
+    <main class="content">
+
+
+        <section class="section">
+            <p class="xn-page-title">歡迎使用 啟耀科技生產測試系統</p>
+            <!-- 圖表區 -->
+            <div class="columns is-variable is-4">
+                <!-- 左側圖表 -->
+                <div class="column is-half">
+                    <div class="box is-flex is-flex-direction-column">
+                        <h2 class="title is-5 mb-4">當日測試</h2>
+                        <div class="xn-piechart-equipment-status"></div>
+                    </div>
+                </div>
+                
+                <!-- 右側圖表 -->
+                <div class="column is-half">
+                    <div class="box is-flex is-flex-direction-column">
+                        <h2 class="title is-5 mb-4">設備異常統計時間</h2>
+                        <div class="xn-piechart-equipment-error"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 資料表格區 -->
+            <div class="box mt-5">
+                <h2 class="title is-5 mb-4">設備生產</h2>
+                <div class="xn-realtime-grid"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- <script src="../js/page/main.js"></script> -->
+</body>
+
+</html>

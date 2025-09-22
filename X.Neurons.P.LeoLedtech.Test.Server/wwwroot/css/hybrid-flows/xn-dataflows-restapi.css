@@ -1,0 +1,542 @@
+.xn-restfulapi-params-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.xn-restfulapi-params-radio-group-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.xn-restfulapi-params-content {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.xn-restfulapi-params-default-text {
+    margin: 0;
+    padding: 0;
+}
+
+.xn-restfulapi-params-grid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.xn-restfulapi-config-container {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--border-color);
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #888;
+    }
+}
+
+.xn-restfulapi-config-general-container {
+    margin-bottom: 40px;
+}
+
+.data_flows_components_restfulapi_config_general_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.xn-restfulapi-config-request-timeout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.xn-restfulapi-config-request-timeout-header-wrapper {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.xn-restfulapi-config-request-timeout-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.xn-restfulapi-config-request-timeout-descript {
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.xn-restfulapi-config-request-timeout-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.xn-restfulapi-config-request-timeout-value {
+    width: 100px;
+}
+
+.xn-restfulapi-config-certificates-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.xn-restfulapi-config-certificates-file-wrapper {
+    margin-bottom: 30px;
+}
+
+.xn-restfulapi-config-certificates-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.xn-restfulapi-config-certificates-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.xn-restfulapi-config-certificates-discript {
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.xn-restfulapi-config-certificates-file {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.xn-restfulapi-config-certificates-file-selectBox {
+    flex: 1;
+}
+
+.xn-restfulapi-config-certificates-passphrase-wrapper {
+    margin-top: 10px;
+}
+
+.xn-restfulapi-auth-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+
+.xn-restfulapi-auth-panel-left {
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.xn-restfulapi-auth-panel-right {
+    width: 75%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.xn-restfulapi-auth-description {
+    margin-top: 10px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.xn-restfulapi-auth-panel-left-select {
+    width: 100%;
+}
+
+.xn-restfulapi-auth-panel-right-content {
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+}
+
+.xn-restfulapi-auth-basic-username {
+    margin-bottom: 5px;
+}
+
+.xn-restfulapi-auth-basic-username-textbox {
+    margin-bottom: 15px;
+}
+
+.xn-restfulapi-auth-basic-password {
+    margin-bottom: 5px;
+}
+
+.xn-restfulapi-auth-bearertoken-token {
+    margin-bottom: 5px;
+}
+
+.xn-restfulapi-auth-bearertoken-token-textbox {
+    margin-bottom: 15px;
+}
+
+.xn-restfulapi-body-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.xn-restfulapi-body-container-radioGroup-container {
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.xn-restfulapi-body-empty-content {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.xn-restfulapi-body-editor-wrapper {
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+    padding: 0 10px 10px 10px;
+    display: none;
+}
+
+.xn-restfulapi-body-editor-container {
+    width: 100%;
+    height: 100%;
+}
+
+.xn-restfulapi-test-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+}
+
+.xn-restfulapi-test-control-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.xn-restfulapi-test-left-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.xn-restfulapi-test-test-button {
+    min-width: 120px;
+}
+
+.xn-restfulapi-test-test-format-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.xn-restfulapi-test-response-format {
+    color: var(--text-color);
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+.xn-restfulapi-test-test-format-selector {
+    min-width: 60px;
+    max-width: 120px;
+    flex: 0 1 auto;
+}
+
+.xn-restfulapi-test-stats {
+    display: none;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.xn-restfulapi-test-stats-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: var(--base-bg);
+    white-space: nowrap;
+}
+
+.xn-restfulapi-test-stats-caption {
+    font-size: 12px;
+}
+
+.xn-restfulapi-test-stat-value {
+    font-size: 12px;
+}
+
+.xn-restfulapi-test-stats-tooltip {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.xn-restfulapi-test-stats-tooltip-response-time {
+    width: 400px;
+}
+
+.xn-restfulapi-test-stats-tooltip-default {
+    width: 300px;
+}
+
+.xn-restfulapi-test-editor-wrapper {
+    flex: 1;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.xn-restfulapi-test-editor {
+    width: 100%;
+    height: 100%;
+}
+
+.xn-restfulapi-test-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.xn-restfulapi-test-loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.xn-restfulapi-test-loading-text {
+    color: #fff;
+    font-size: 14px;
+}
+
+.xn-restfulapi-test-stats-statusCode {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.xn-restfulapi-test-stats-statusCode-value {
+    font-weight: "500";
+    font-size: "14px";
+}
+
+.xn-restfulapi-test-stats-statusCode-description {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-left: 24px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.xn-restfulapi-test-stats-tooltip-content {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.xn-restfulapi-test-stats-tooltip-header-row {
+    display: table-row;
+}
+
+.xn-restfulapi-test-stats-tooltip-header-icon-cell {
+    display: table-cell;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-tooltip-header-title-cell {
+    display: table-cell;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-tooltip-header-empty-cell {
+    display: table-cell;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-tooltip-header-total-cell {
+    display: table-cell;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: right;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-row {
+    display: table-row;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-empty-cell {
+    display: table-cell;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-phase-cell {
+    display: table-cell;
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 3px;
+    vertical-align: middle;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-right: 1px solid var(--border-color);
+}
+
+.xn-restfulapi-test-stats-tooltip-data-timeline-cell {
+    display: table-cell;
+    padding: 3px;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-timeline {
+    height: 16px;
+    background-color: var(--primary-bg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-timeline-fill {
+    position: absolute;
+    height: 100%;
+}
+
+.xn-restfulapi-test-stats-tooltip-data-duration-cell {
+    display: table-cell;
+    text-align: right;
+    color: var(--text-color);
+    font-size: 14px;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.xn-restfulapi-test-stats-responseSize {
+    padding: 15px;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    width: 100%;
+}
+
+.xn-restfulapi-test-stats-responseSize-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.xn-restfulapi-test-stats-responseSize-caption {
+    font-weight: "500";
+    font-size: "14px";
+}
+
+.xn-restfulapi-test-stats-responseSize-value {
+    margin-left: auto;
+    color: var(--text-primary);
+}
+
+.xn-restfulapi-test-stats-responseSize-details-content {
+    margin-left: 24px;
+    font-size: 13px;
+}
+
+.xn-restfulapi-test-stats-responseSize-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.xn-restfulapi-test-stats-responseSize-details-response{
+    margin: 15px -15px;
+    height: 1px;
+    background-color: var(--border-color);
+}

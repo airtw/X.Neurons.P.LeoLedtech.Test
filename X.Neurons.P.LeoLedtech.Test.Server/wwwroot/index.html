@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>啟耀科技生產測試系統</title>
+    <link rel="stylesheet" href="../css/basic/basic.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../libs/devextreme/jquery.min.js"></script>
+    <!-- #region::DevExtreme Lib -->
+    <link rel="stylesheet" href="../libs/devextreme/css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="../libs/devextreme/css/dx.light.css" data-active="true" />
+    <link rel="dx-theme" data-theme="generic.dark" href="../libs/devextreme/css/dx.dark.css" data-active="false" />
+    <link rel="dx-theme" data-theme="generic.dark.compact" type="text/css" href="../libs/devextreme/css/dx.dark.compact.css" data-active="false" />
+
+    <script src="../libs/devextreme/dx.all.js"></script>
+    <script src="../libs/devextreme/dx.aspnet.data.js"></script>
+    <script src="../libs/devextreme/exceljs.min.js"></script>
+    <script src="../libs/devextreme/FileSaver.min.js"></script>
+    <script src="../libs/devextreme/localization/dx.messages.zh-tw.js"></script>
+    <!-- #endregion::DevExtreme Lib -->
+    <!-- #region::Microsoft SignaIR Lib -->
+    <script src="../libs/microsoft-signalr/signalr.min.js"></script>
+    <!-- #endregion::Microsoft SignaIR Lib -->
+    <!-- #region::Core Lib -->
+    <script src="../languages/zh-TW.js"></script>
+    <script src="../languages/en-US.js"></script>
+    <script src="../js/i18n.js"></script>
+    <!-- #endregion::Core Lib -->
+    <!-- #region::Moment Lib -->
+    <script src="../libs/moment/moment.min.js"></script>
+    <!-- #endregion::Moment Lib -->
+    
+</head>
+
+<body>
+    <div class="xn-loading-overlay">
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">載入中...</div>
+        </div>
+    </div>
+    <!-- #region::Header -->
+    <header class="xn-header">
+        <!-- #region::Logo -->
+        <div class="xn-logo">
+            <!-- #region::Desktop Logo -->
+            <svg class="xn-logo-light xn-logo-desktop">
+                <use href="../images/brand-logos/desktop-light.svg#uuid-922d5693-3eea-49de-8618-c35c21b7cf92" />
+            </svg>
+            <svg class="xn-logo-dark xn-logo-desktop">
+                <use href="../images/brand-logos/desktop-dark.svg#uuid-02e9bfcc-d55c-42c4-865d-f61cb612d0ec" />
+            </svg>
+            <!-- #endregion::Desktop Logo -->
+            <!-- #region::Mobile Logo -->
+            <svg class="xn-logo-light xn-logo-mobile">
+                <use href="../images/brand-logos/mobile-light.svg#uuid-c76e70dc-9451-4ca9-a0b8-9859d52bd1a5" />
+            </svg>
+            <svg class="xn-logo-dark xn-logo-mobile">
+                <use href="../images/brand-logos/mobile-dark.svg#uuid-675f48dc-df76-486d-a41b-f6401eae680d" />
+            </svg>
+            <!-- #endregion::Mobile Logo -->
+        </div>
+        <!-- #endregion::Logo-->
+        <!-- #region::Serach Bar -->
+        <!-- <div class="xn-search-bar">
+            <input type="text" placeholder="搜尋...">
+        </div> -->
+        <!-- #endregion::Serach Bar -->
+        <!-- #region::Header Controls -->
+        <div class="xn-header-controls">
+            <p class="system-time">2024/01/02 上午 00:00:00</p>
+            <button id="theme-toggle">
+                <svg class="xn-theme-icon moon" viewBox="0 0 24 24" width="16" height="16">
+                    <use href="../images/system-icons/dark-switch-btn.svg#uuid-be36f1a0-dbe3-4ee2-a8c3-34fa83d17114" />
+                </svg>
+                <svg class="xn-theme-icon sun" viewBox="0 0 24 24" width="16" height="16">
+                    <use href="../images/system-icons/light-switch-btn.svg#uuid-e9014fbb-8519-4098-9298-8763ec030fd8" />
+                </svg>
+            </button>
+            <!-- <div class="xn-language-dropdown"></div> -->
+            <!-- <span class="user-account">user@example.com</span> -->
+<!-- 修改user-info的HTML結構 -->
+<div class="user-info">
+    <div class="user-details">
+        <span class="user-name">User Full Name</span>
+        <span class="user-role">User Role</span>
+    </div>
+    <div class="user-avatar">
+        <span>U</span>
+    </div>
+    <!-- 添加下拉選單 -->
+    <div class="user-dropdown">
+        <div class="user-dropdown-content">
+            <div class="user-dropdown-header">
+                <div class="user-info-detail">
+                    <div class="user-avatar-small">
+                        <span>U</span>
+                    </div>
+                    <div class="user-text">
+                        <div class="user-dropdown-name"></div>
+                        <div class="user-dropdown-role">使用者</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="user-dropdown-divider">
+            <button class="logout-button">登出</button>
+        </div>
+    </div>
+</div>
+        </div>
+        <!-- #endregion::Header Controls -->
+    </header>
+    <!-- #endregion::Header -->
+    <!-- #region::Sidebar -->
+    <nav class="xn-sidebar">
+        <!-- <div class="xn-menu-item" data-url="/main">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/home.svg#b" />
+            </svg>
+            <span class="xn-menu-text">系統首頁</span>
+        </div> -->
+        <div class="xn-menu-item" data-url="/main">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/history.svg#b" />
+            </svg>
+            <span class="xn-menu-text">歷史資訊</span>
+        </div>
+        <div class="xn-menu-item" data-url="/xn-work-order">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/workorder.svg#b" />
+            </svg>
+            <span class="xn-menu-text">工單管理</span>
+        </div>
+        <div class="xn-menu-item" data-url="/xn-test-step">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/step.svg#b" />
+            </svg>
+            <span class="xn-menu-text">測試步驟管理</span>
+        </div>
+        <div class="xn-menu-item" data-url="/xn-product">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/product.svg#b" />
+            </svg>
+            <span class="xn-menu-text">產品管理</span>
+        </div>
+        <div class="xn-menu-item" data-url="/xn-jig">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/jig.svg#b" />
+            </svg>
+            <span class="xn-menu-text">治具管理</span>
+        </div>
+        <!-- <div class="xn-menu-item" data-url="/xn-system-config">
+            <svg class="xn-menu-icon" viewBox="0 0 24 24" width="16" height="16">
+                <use href="../images/sidebar-icons/config.svg#b" />
+            </svg>
+            <span class="xn-menu-text">系統設定</span>
+        </div> -->
+
+        <!-- 版本資訊區塊 -->
+        <div class="xn-version-info">
+            <div class="xn-version-content">
+                <svg class="xn-version-icon" viewBox="0 0 24 24" width="14" height="14">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor" />
+                </svg>
+                <div class="xn-version-text">
+                    <span class="xn-version-number">v 1.0.0</span>
+                    <span class="xn-version-date">2025.09.20</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion::Sidebar -->
+
+    <main class="xn-main-content"></main>
+
+    <div class="system-message-toast"></div>
+    <script src="../js/basic/basic.loader.js"></script>
+    <script src="../js/basic/basic.them.js"></script>
+    <script src="../js/basic/basic.language.js"></script>
+    <script src="../js/basic/basic.session.js"></script>
+    <script src="../js/basic/basic.session.dashboard.js"></script>
+    <script src="../js/basic/basic.auth.js"></script>
+    <script src="../js/basic/basic.menu.js"></script>
+    <script src="../js/index.js"></script>
+    
+</body>
+
+</html>

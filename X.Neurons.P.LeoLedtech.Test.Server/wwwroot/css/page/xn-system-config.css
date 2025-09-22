@@ -1,0 +1,14 @@
+.batch-put-button {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+}
+
+.batch-put-button .dx-button {
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.history-result-grid {
+    margin-top: 20px;
+}

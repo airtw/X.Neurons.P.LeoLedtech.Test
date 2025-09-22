@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>啟耀科技生產測試 - 管理頁面</title>
+    <link rel="stylesheet" href="../css/basic/basic.css" />
+    <link rel="stylesheet" href="../css/basic/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../libs/devextreme/jquery.min.js"></script>
+    <!-- #region::DevExtreme Lib -->
+    <link rel="stylesheet" href="../libs/devextreme/css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="../libs/devextreme/css/dx.light.css" data-active="true" />
+    <link rel="dx-theme" data-theme="generic.dark" href="../libs/devextreme/css/dx.dark.css" data-active="false" />
+    <link rel="dx-theme" data-theme="generic.dark.compact" type="text/css"
+        href="../libs/devextreme/css/dx.dark.compact.css" data-active="false" />
+    <script src="../libs/devextreme/dx.all.js"></script>
+    <!-- #endregion::DevExtreme Lib -->
+    <!-- #region::Microsoft SignaIR Lib -->
+    <script src="../libs/microsoft-signalr/signalr.min.js"></script>
+    <!-- #endregion::Microsoft SignaIR Lib -->
+    <!-- #region::Core Lib -->
+    <script src="../languages/zh-TW.js"></script>
+    <script src="../languages/en-US.js"></script>
+    <script src="../js/i18n.js"></script>
+    <!-- #endregion::Core Lib -->
+</head>
+
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle">
+        <svg class="xn-theme-icon moon" viewBox="0 0 24 24" width="16" height="16">
+            <use href="../images/system-icons/dark-switch-btn.svg#uuid-be36f1a0-dbe3-4ee2-a8c3-34fa83d17114" />
+        </svg>
+        <svg class="xn-theme-icon sun" viewBox="0 0 24 24" width="16" height="16">
+            <use href="../images/system-icons/light-switch-btn.svg#uuid-e9014fbb-8519-4098-9298-8763ec030fd8" />
+        </svg>
+    </button>
+
+    <!-- Logo Section -->
+    <div class="main-logo">
+        <!-- Desktop Logo -->
+        <svg class="xn-logo-light xn-logo-desktop">
+            <use href="../images/brand-logos/desktop-light.svg#uuid-922d5693-3eea-49de-8618-c35c21b7cf92" />
+        </svg>
+        <svg class="xn-logo-dark xn-logo-desktop">
+            <use href="../images/brand-logos/desktop-dark.svg#uuid-02e9bfcc-d55c-42c4-865d-f61cb612d0ec" />
+        </svg>
+        <!-- Mobile Logo -->
+        <svg class="xn-logo-light xn-logo-mobile">
+            <!-- <use href="../images/brand-logos/mobile-light.svg#b" /> -->
+            <use href="../images/brand-logos/desktop-light.svg#uuid-c76e70dc-9451-4ca9-a0b8-9859d52bd1a5" />
+        </svg>
+        <svg class="xn-logo-dark xn-logo-mobile">
+            <use href="../images/brand-logos/desktop-dark.svg#uuid-675f48dc-df76-486d-a41b-f6401eae680d" />
+        </svg>
+    </div>
+
+    <div class="xn-login-container">
+        <div class="xn-login-header">
+            <h1 class="i18n" data-key="login_title">Hynrid Flow</h1>
+        </div>
+        <form class="xn-login-form">
+            <div class="xn-form-group">
+                <div id="username"></div>
+            </div>
+            <div class="xn-form-group">
+                <div id="password"></div>
+            </div>
+            <div class="xn-login-button"></div>
+
+        </form>
+
+    </div>
+
+    <!-- Toast container -->
+    <div class="message-toast"></div>
+    <div class="system-message-toast"></div>
+    <script src="../js/basic/basic.them.js"></script>
+    <script src="../js/basic/basic.language.js"></script>
+    <script src="../js/basic/basic.session.js"></script>
+    <script src="../js/basic/basic.auth.js"></script>
+    <script src="../js/basic/basic.login.js"></script>
+</body>
+
+</html>

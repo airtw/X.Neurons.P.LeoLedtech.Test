@@ -1,0 +1,258 @@
+/* 基礎容器樣式 
+----------------------------------------*/
+.parent-drawflow {
+    display: flex;
+    touch-action: none;
+    outline: none;
+}
+
+.drawflow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    user-select: none;
+    perspective: 0;
+}
+
+.drawflow .parent-node {
+    position: relative;
+}
+
+/* 節點基本樣式 
+----------------------------------------*/
+.drawflow .drawflow-node {
+    display: flex;
+    position: absolute;
+    width: 160px;
+    min-height: 32px;
+    padding: 4px 12px;
+    background: var(--secondary-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    gap: 8px;
+}
+
+/* 節點狀態 */
+.drawflow .drawflow-node.selected {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.drawflow .drawflow-node:hover {
+    cursor: move;
+}
+
+/* 節點內容
+----------------------------------------*/
+.drawflow .drawflow-node .drawflow_content_node {
+    width: 100%;
+    height: 100%; /* 確保內容區域填滿整個節點高度 */
+    min-height: inherit; /* 繼承父元素的最小高度 */
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.node-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+}
+
+/* 節點圖示與標題 */
+.node-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.node-title {
+    font-size: 14px;
+    color: var(--text-color);
+    word-break: break-word;
+    flex: 1;
+}
+
+/* 連接點容器
+----------------------------------------*/
+.drawflow .drawflow-node .inputs,
+.drawflow .drawflow-node .outputs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    top: 0;
+    padding: 2px 0;
+    gap: 4px;
+}
+
+.drawflow .drawflow-node .inputs {
+    left: 0;
+}
+
+.drawflow .drawflow-node .outputs {
+    right: 0;
+}
+
+/* 連接點樣式 */
+.drawflow .drawflow-node .input,
+.drawflow .drawflow-node .output {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--primary-bg);
+    cursor: crosshair;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.drawflow .drawflow-node .input {
+    left: -10px;
+    background: yellow;
+}
+
+.drawflow .drawflow-node .output {
+    right: -10px;
+}
+
+/* 連接點狀態 */
+.drawflow .drawflow-node .output.success {
+    background: #4BAE4F;
+}
+
+.drawflow .drawflow-node .output.fail {
+    background: #E44747;
+}
+
+/* 連接點自適應 */
+.drawflow .drawflow-node {
+    min-height: calc(40px + var(--connection-count, 1) * 20px);
+}
+
+/* 連線樣式
+----------------------------------------*/
+.drawflow .connection {
+    position: absolute;
+    pointer-events: none;
+    aspect-ratio: 1 / 1;
+}
+
+.drawflow .connection svg {
+    z-index: 0;
+    position: absolute;
+    overflow: visible !important;
+}
+
+/* 連線路徑 */
+.drawflow .connection .main-path,
+.drawflow .main-path {
+    fill: none;
+    stroke-width: 5px;
+    stroke: steelblue;
+    pointer-events: all;
+}
+
+.drawflow .connection .main-path:hover {
+    stroke: #1266ab;
+    cursor: pointer;
+}
+
+.drawflow .connection .main-path.selected {
+    stroke: #43b993;
+}
+
+/* 連線控制點 */
+.drawflow .connection .point {
+    cursor: move;
+    stroke: black;
+    stroke-width: 2;
+    fill: white;
+    pointer-events: all;
+}
+
+.drawflow .connection .point.selected,
+.drawflow .connection .point:hover {
+    fill: #1266ab;
+}
+
+/* 刪除按鈕
+----------------------------------------*/
+.drawflow-delete {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.drawflow > .drawflow-delete {
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.parent-node .drawflow-delete {
+    right: -15px;
+    top: -15px;
+}
+
+/* 工具提示
+----------------------------------------*/
+.drawflow .tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.drawflow .input .tooltip {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.drawflow .output .tooltip {
+    right: 20px;
+    top: 150%;
+    transform: translateY(-50%);
+}
+
+.drawflow .input:hover .tooltip,
+.drawflow .output:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 連接點自適應 - 確保節點高度足夠 */
+.drawflow .drawflow-node:has(.outputs > :nth-child(2)),
+.drawflow .drawflow-node:has(.inputs > :nth-child(2)) {
+    min-height: 52px;
+}
+
+.drawflow .drawflow-node:has(.outputs > :nth-child(3)),
+.drawflow .drawflow-node:has(.inputs > :nth-child(3)) {
+    min-height: 72px;
+}

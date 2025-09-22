@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Main Logo */
+.main-logo {
+    /* margin-top: 400px; */
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo svg {
+    height: 100%;
+    width: 200px;
+    display: none;
+}
+
+/* Desktop Logo */
+.main-logo .xn-logo-desktop.xn-logo-light {
+    display: block;
+}
+
+[data-theme="dark"] .main-logo .xn-logo-desktop.xn-logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .main-logo .xn-logo-desktop.xn-logo-dark {
+    display: block;
+}
+
+/* Mobile Logo */
+.main-logo .xn-logo-mobile {
+    display: none;
+}
+
+.xn-login-container {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+}
+
+.xn-login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.xn-login-header h1 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.xn-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.xn-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.login-button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.dx-texteditor {
+    width: 100%;
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+
+/* DevExpress theme overrides */
+.dx-button-mode-contained.dx-state-focused {
+    background-color: var(--hover-color);
+}
+
+.dx-texteditor.dx-state-focused {
+    border-color: var(--hover-color);
+}
+
+/* Toast styles */
+#toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.dx-toast-content {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Loading state */
+.dx-loadpanel-content {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+}
+
+.xn-login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.xn-language-dropdown {
+    display: inline-block;
+    width: 140px;
+}
+
+.xn-language-dropdown .dx-dropdownbox {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+}
+
+.xn-language-dropdown .dx-list {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+}
+
+.xn-language-dropdown .dx-list-item {
+    color: var(--text-color);
+}
+
+.xn-language-dropdown .dx-list-item:hover {
+    background-color: var(--hover-color);
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+    .xn-language-dropdown {
+        width: 120px;
+    }
+    .main-logo {
+        height: 40px;
+    }
+
+    .main-logo svg {
+        width: 150px;
+    }
+
+    /* Switch to mobile logo */
+    .main-logo .xn-logo-desktop {
+        display: none !important;
+    }
+
+    .main-logo .xn-logo-mobile.xn-logo-light {
+        display: block;
+    }
+
+    [data-theme="dark"] .main-logo .xn-logo-mobile.xn-logo-light {
+        display: none;
+    }
+
+    [data-theme="dark"] .main-logo .xn-logo-mobile.xn-logo-dark {
+        display: block;
+    }
+
+    .xn-login-container {
+        padding-top: 100px; /* 調整手機版間距 */
+    }
+}

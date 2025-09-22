@@ -1,0 +1,31 @@
+.batch-put-button {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+}
+
+.batch-put-button .dx-button {
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.history-result-grid {
+    margin-top: 20px;
+}
+
+.history-result-content {
+    height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
+}
+
+.history-result-content .history-result-grid {
+    flex: 1;
+    min-height: 0;
+    margin-top: 1rem;
+    height: auto !important;
+}
+
+.history-result-grid .dx-datagrid-table.dx-datagrid-table-fixed {
+    margin-bottom: 0px !important;
+}

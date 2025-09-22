@@ -11,6 +11,8 @@ namespace X.Neurons.P.LeoLedtech.Test.TotalPower.Models.Test
     {
         [JsonPropertyName("id")]
         public int ID { get; set; }
+        [JsonPropertyName("channel")]
+        public int ChannelNumber { get; set; }
         [JsonPropertyName("hh")]
         public double HH { get; set; }
         [JsonPropertyName("h")]

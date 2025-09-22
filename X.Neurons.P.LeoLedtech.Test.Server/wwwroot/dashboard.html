@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>可視化面板</title>
+    <link rel="stylesheet" href="../css/dashboard/main.css" />
+    <script src="../libs/devextreme/jquery.min.js"></script>
+    <!-- #region::Lodash Lib -->
+    <script src="../libs/lodash/lodash.min.js"></script>
+    <!-- #endregion::Lodash Lib -->
+    <!-- #region::DevExtreme Lib -->
+    <link rel="stylesheet" href="../libs/devextreme/css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="../libs/devextreme/css/dx.light.css" data-active="true" />
+    <link rel="dx-theme" data-theme="generic.dark" href="../libs/devextreme/css/dx.dark.css" data-active="false" />
+    <link rel="dx-theme" data-theme="generic.dark.compact" type="text/css"
+        href="../libs/devextreme/css/dx.dark.compact.css" data-active="false" />
+    <script src="../libs/devextreme/dx.all.js"></script>
+    <!-- #endregion::DevExtreme Lib -->
+    <!-- #region::Microsoft SignaIR Lib -->
+    <script src="../libs/microsoft-signalr/signalr.min.js"></script>
+    <!-- #endregion::Microsoft SignaIR Lib -->
+
+    <!-- #region::Core Lib -->
+    <script src="../js/dashboard/main.js"></script>
+    <script src="../languages/zh-TW.js"></script>
+    <script src="../languages/en-US.js"></script>
+    <script src="../js/i18n.js"></script>
+    <!-- #endregion::Core Lib -->
+</head>
+
+<body>
+    <!-- 左側區塊 -->
+    <div class="left-panel">
+        <div class="logo">
+            <svg class="xn-component-icon">
+                <use href="../images/brand-logos/desktop-light.svg#uuid-922d5693-3eea-49de-8618-c35c21b7cf92" />
+            </svg>
+            <span class="brand-title">| WB</span>
+        </div>
+        <div class="system-time">2025/01/01 下午 00:00:00</div>
+        <div class="station" id="equipment-station">站別：F7-11</div>
+        <div class="status-bar">
+            <div class="status-dot green"></div>
+            <div class="status-dot yellow"></div>
+            <div class="status-dot red"></div>
+            <div class="connection-status">
+                <svg class="connection-icon connected" viewBox="0 0 24 24" width="20" height="20">
+                    <use href="../images/dashboard/connect-status-normal.svg#b"/>
+                </svg>
+                <svg class="connection-icon disconnected" viewBox="0 0 24 24" width="20" height="20">
+                    <use href="../images/dashboard/connect-status-error.svg#b"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中間區塊 -->
+    <div class="center-panel">
+        <div class="gauge-section">
+            <div class="gauge-title">稼動率</div>
+            <div class="gauge-content">
+                <!-- 左側指針儀表 -->
+                <div class="gauge-meter">
+                <div id="gaugeChart" class="gauge-chart-container"></div>
+                </div>
+                <!-- 右側數值區 -->
+                <div class="gauge-data">
+                    <div class="gauge-value">100</div>
+                    <div class="gauge-unit">%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="metrics-section">
+            <div class="metric">
+                <div class="metric-title-left">生產計數</div>
+                <div class="metric-content">
+                    <div class="metric-value" id="production-count-value">151232131</div>
+                    <div class="metric-unit">PCS</div>
+                </div>
+            </div>
+            <div class="metric">
+                <div class="metric-title-right">生產速度</div>
+                <div class="metric-content">
+                    <div class="metric-value" id="production-rate-value">151232131</div>
+                    <div class="metric-unit" id="production-rate-unit">Sec / PCS</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <div class="status-item">
+                <div class="status-indicator status-error" id="equipment-error-status"></div>
+                <span>設備異常</span>
+            </div>
+            <div class="status-item">
+                <div class="status-indicator status-stop" id="equipment-wait-status"></div>
+                <span>設備等待</span>
+            </div>
+            <div class="status-item">
+                <div class="status-indicator status-warning" id="equipment-stop-status"></div>
+                <span>設備暫停</span>
+            </div>
+            <div class="status-item">
+                <div class="status-indicator status-normal" id="equipment-run-status"></div>
+                <span>設備運行</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右側區塊 -->
+    <div class="right-panel">
+        <div class="station-title">生產監控站</div>
+        <div class="station-list">
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-08
+            </div>
+            <div class="station-item active">
+                <div class="status-light">
+                    <div class="light-normal"></div>
+                </div>
+                F7-09
+            </div>
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-10
+            </div>
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-11
+            </div>
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-12
+            </div>
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-13
+            </div>
+            <div class="station-item">
+                <div class="status-light">
+                    <div class="light-warning"></div>
+                </div>
+                F7-14
+            </div>
+        </div>
+        <div class="scroll-arrow left">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <use href="../images/dashboard/scroll-arror-left.svg#b" />
+            </svg>
+        </div>
+        <div class="scroll-arrow right">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <use href="../images/dashboard/scroll-arror-right.svg#b" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- #region::echarts Lib -->
+    <script src="../libs/echarts/echarts.min.js"></script>
+    <!-- #endregion::echarts Lib -->
+    <script src="../js/basic/basic.session.dashboard.js"></script>
+    <script src="../js/dashboard/rwd.js"></script>
+</body>
+
+</html>

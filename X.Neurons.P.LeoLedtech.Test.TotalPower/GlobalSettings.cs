@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using X.Neurons.P.LeoLedtech.Test.TotalPower.BasicUtlis;
+﻿using X.Neurons.P.LeoLedtech.Test.TotalPower.BasicUtlis;
 
 namespace X.Neurons.P.LeoLedtech.Test.TotalPower
 {

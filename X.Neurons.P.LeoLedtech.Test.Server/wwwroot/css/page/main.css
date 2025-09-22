@@ -1,0 +1,51 @@
+.chart-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-grid-container {
+    min-height: 400px;
+}
+
+.section {
+    padding: 1rem;
+}
+
+.columns {
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pieContainer,
+.chart-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.xn-page-title {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title {
+    color: var(--text-color) !important;
+}
+
+.box {
+    background-color: var(--secondary-bg) !important;
+    border: 1px solid var(--border-color) !important;
+}
